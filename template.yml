@@ -15,6 +15,9 @@ Resources:
       MemorySize: 512
       Policies: AWSLambdaBasicExecutionRole
       Timeout: 30
+      Environment:
+        Variables:
+          SPRING_PROFILES_ACTIVE: local
       Events:
         ProxyResource:
           Type: Api
