@@ -9,6 +9,5 @@ import java.util.Optional;
 
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, Long> {
-    @Query("SELECT r FROM Review r WHERE r.imdbId = ?1")
     Optional<Review> findByImdbId(String imdbId);
 }
